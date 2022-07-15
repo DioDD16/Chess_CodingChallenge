@@ -5,16 +5,17 @@ import board.Spot;
 
 public class King extends GenericPiece{
 
-    public King(boolean isWhite) {
+    public King(boolean isWhite, Spot spot) {
         this.setWhite(isWhite);
         this.setKilled(false);
+        this.setSpot(spot);
         this.setPieceName(PieceName.KING);
     }
 
     @Override
     public boolean canMove(final Board board,
-                           final Spot start,
                            final Spot end) {
+        Spot currentSpot = this.getSpot();
 
         //TODO: check whether new position is valid
 

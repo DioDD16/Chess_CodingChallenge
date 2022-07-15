@@ -13,9 +13,8 @@ public class Queen extends GenericPiece {
 
     @Override
     public boolean canMove(final Board board,
-                           final Spot start,
                            final Spot end) {
-
+        Spot currentSpot = this.getSpot();
         //TODO: check whether new position is valid
 
         return false;

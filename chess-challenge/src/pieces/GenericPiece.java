@@ -8,6 +8,7 @@ public abstract class GenericPiece {
     private boolean isKilled;
     private boolean isWhite;
     private PieceName pieceName;
+    private Spot spot;
 
     public GenericPiece() {
     }
@@ -36,6 +37,9 @@ public abstract class GenericPiece {
 
     public void setPieceName(PieceName pieceName) { this.pieceName = pieceName; }
 
-    public abstract boolean canMove(Board board,
-                                    Spot start, Spot end);
+    public Spot getSpot() { return this.spot; }
+
+    public void setSpot(Spot spot) { this.spot = spot; }
+
+    public abstract boolean canMove(Board board, Spot end);
 }
